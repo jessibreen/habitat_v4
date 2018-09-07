@@ -73,7 +73,7 @@
     }
 
     //Get GeoJSON and put it in the project layergroup
-    $.getJSON("data/addresses_final.geojson", function(data) {
+    $.getJSON("data/addresses.geojson", function(data) {
         markerLayer = L.geoJson(data, {
             onEachFeature: function ( feature, layer ){
                 projects.addLayer(layer), layer.bindPopup(feature.properties.street)},
