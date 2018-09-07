@@ -76,7 +76,7 @@
     $.getJSON("data/addresses.geojson", function(data) {
         markerLayer = L.geoJson(data, {
             onEachFeature: function ( feature, layer ){
-                projects.addLayer(layer), layer.bindPopup(feature.properties.street)},
+                projects.addLayer(layer), layer.bindPopup(feature.properties.number+" "+feature.properties.street)},
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker (latlng, style(feature));
             }
